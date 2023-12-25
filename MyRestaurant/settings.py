@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MyRestaurantApp',
+    # 'django.contrib.auth.backends.ModelBackend'
 ]
 
 MIDDLEWARE = [
@@ -98,6 +99,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'MyRestaurantApp.UserProfile'  # Replace 'your_app' with the actual name of your Django app
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

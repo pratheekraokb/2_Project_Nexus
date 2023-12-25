@@ -14,7 +14,11 @@
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: 50%;
+            background-color: white;
         }
+        {% comment %} body{ {% endcomment %}
+            {% comment %} background:black; {% endcomment %}
+        {% comment %} } {% endcomment %}
     </style>
 
 </head>
@@ -25,15 +29,16 @@
             
         </div>
         <div class="right">
-            <form action="/login">
+            <form action="/api/loginView/" method="POST">
+                {% csrf_token %}
                 <h1>Sign In</h1>
                 <div class="email">
                     <label for="emailId">E-Mail ID:-</label>
-                    <input type="email" name="" id="" placeholder="Enter your E-Mail ID" required>
+                    <input type="email" name="email" id="email" placeholder="Enter your E-Mail ID" required>
                 </div>
                 <div class="password">
                     <label for="password">Password:-</label>
-                    <input type="password" name="" id="password" name="password" placeholder="Enter your Password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
                     <!-- <input type="password" name="password" id="password" placeholder="Your Password"> -->
                     <button id="togglePassword" type="button">👁️</button>
 

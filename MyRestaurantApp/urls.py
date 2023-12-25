@@ -7,11 +7,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('',views.Home, name="Home"),
-    path('signin/', views.signin, name="signin"),
-    path('logout/',views.logout,name='logout'),
+    path('home/',views.Home, name="Home"),
+    path('',views.signin, name="signin"),
+    # path('signin/', views.signin, name="signin"),
+    path('logout/',views.logoutApi,name='logout'),
     path('signup/', views.signup, name='signup'),
-    path('api/signupApi/', views.signupApi, name="signupApi")
+    path('api/signupApi/', views.signupApi, name="signupApi"),
+    path('api/loginView/', views.login_view,name="loginView"),
 ]
 
 
