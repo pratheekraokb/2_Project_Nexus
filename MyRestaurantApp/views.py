@@ -6,10 +6,11 @@ def Home(request):
     return HttpResponse("hai")
 
 def signin(request):
-    return HttpResponse("Signin")
+    return render(request,"signin.html")
 
 def logout(request):
     return HttpResponse("logout")
 
 def signup(request):
-    return HttpResponse("Signup")
+    # return HttpResponse("Signup")
+    return render(request,"signup.html")
